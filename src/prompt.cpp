@@ -1,8 +1,9 @@
+#include <string>
 #include <unistd.h>
 #include <pwd.h>
-#include <string>
 #include "prompt.h"
 
+//获取系统信息 "主机名@用户名:当前目录$ "
 std::string get_prompt_info() {
     char hostname[256] = {};
     gethostname(hostname, sizeof(hostname));
